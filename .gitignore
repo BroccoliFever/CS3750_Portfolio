@@ -1,0 +1,30 @@
+# Node.js / Express
+node_modules/
+npm-debug.log
+*.env
+
+# React
+build/
+dist/
+
+# MongoDB
+data/
+mongod.lock
+
+# Editor / IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# macOS
+.DS_Store
+Thumbs.db
+
+# Dependency lock files
+yarn.lock
+package-lock.json
+
+# Testing files
+coverage/
