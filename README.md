@@ -13,7 +13,7 @@ The Tic-Tac-Toe game project provides an interactive web-based version of the we
 
 The core component of the project is the `Board` React component, which renders the game board and handles player interactions. The game status, including the current player's turn and game outcome, is displayed dynamically on the interface.
 
-Click [here](./tictactoe) to view the repo for this project!
+**Click [here](./tictactoe) to view the repo for this project!**
 
 ### Technologies Used
 
