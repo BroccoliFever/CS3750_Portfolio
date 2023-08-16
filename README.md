@@ -126,3 +126,39 @@ router.post("/", async (req, res) => {
 ```
 
 - **Backend Integration**: Integrating the frontend and backend components of the app, including handling form submissions and database interactions, required establishing communication between React and Express.
+
+## Speed Card Game App
+
+This Speed Card Game app was developed as a group project, with a focus on real-time gameplay using socket.io. My main role was working on the socket connections and creating separate game rooms for players.
+
+### Technologies Used
+
+- React: Used for building the frontend user interface of the game, including the chat feature and game room selection.
+- Node.js: Backend runtime environment for running the server and handling socket.io connections.
+- Express: Web application framework used to handle routing and API endpoints.
+- Socket.io: Real-time communication library used to implement multiplayer functionality and real-time updates.
+- MongoDB (not seen in provided code): A database used to store user information and game states.
+- React Bootstrap: Utilized for styling and designing the user interface.
+- React Router: Used for routing and navigation within the app.
+
+### Technical Challenges
+
+1. **Socket Communication**: Implementing real-time multiplayer functionality using socket.io required establishing a connection between the client and the server. Synchronizing game states, chat messages, and player actions in real-time while ensuring smooth gameplay was a key challenge.
+
+2. **Game Room Management**: Creating and managing separate game rooms for players was crucial to isolate their gameplay experience. Handling room creation, joining, and leaving while maintaining the integrity of each game room was a complex task.
+
+3. **Data Synchronization**: Ensuring that each player's game state remains synchronized and consistent across devices and platforms was a significant technical challenge. Handling various edge cases and ensuring data integrity was important for fair gameplay.
+
+4. **User Authentication and Storage (not seen in provided code)**: If the app includes user authentication and data storage, integrating it with the game logic and ensuring secure storage of user information and game states would require careful implementation.
+
+### My Contributions
+
+- Implementing socket.io connections for real-time communication between players.
+- Designing and developing the frontend interface for the game room selection and chat feature.
+- Creating separate game rooms and managing player interactions within those rooms.
+- Handling synchronization of game states and player actions through socket.io.
+
+My work played a vital role in enabling the multiplayer functionality and enhancing the overall user experience of the Speed Card Game app. My understanding of socket.io and room management significantly contributed to the successful implementation of real-time multiplayer gameplay.
+
+*Note:* This project was meant to be an experience in a full-stack development lifecycle, and as such creating a fully-functional app was not the end goal. The app is not a complete product, rather a demonstration of solving problems with a team.
+
