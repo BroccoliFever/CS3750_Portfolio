@@ -26,7 +26,7 @@ The core component of the project is the `Board` React component, which renders 
 - **Component Interactions**: Ensuring seamless interaction between components, such as updating the game state on square clicks and managing player turns, was crucial for a smooth gameplay experience.
 
 - **Dynamic Status Updates**: Dynamically updating and displaying the game status, including the current player and game outcome, while ensuring a responsive and user-friendly interface was a significant challenge to tackle at the beginning with limited MERN experience. This was solved in a handler function:
-```
+```javascript
 function handleClick(i) {
     if (squares[i] || calculateWinner(squares)) return; // if square is already filled, return (do nothing
     const nextSquares = squares.slice();
