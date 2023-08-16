@@ -159,7 +159,7 @@ This Speed Card Game app was developed as a group project, with a focus on real-
 - Handling synchronization of game states and player actions through socket.io.
 
 ```javascript
-# server/server.mjs
+// server/server.mjs
   socket.on("getRooms", () => {
     console.log("getRooms on server.mjs");
     socket.emit("roomList", rooms);
@@ -194,6 +194,46 @@ This Speed Card Game app was developed as a group project, with a focus on real-
     console.log(username + " joined the server");
     socket.emit("joinedRoom", userRooms[username]);
   });
+```
+```javascript
+// client/foyer.js
+  useEffect(() => {
+    // Emit "getRooms" event to fetch the room list when the component mounts
+    socket.emit("getRooms");
+
+    // Listen for "roomList" event and update rooms state
+    socket.on("roomList", (roomList) => {
+      setRooms(roomList);
+    });
+
+    // Clean up socket listeners when the component unmounts
+    return () => {
+      socket.off("roomList");
+    };
+  }, []);
+
+  const handleCreateRoom = () => {
+    if (roomNumber === "") {
+      socket.emit("createRoom");
+      socket.on("roomCreated", (roomID) => {
+        console.log("roomCreated event received with roomID:", roomID);
+        setRoomNumber(roomID);
+      });
+      socket.on("roomList", (roomList) => {
+        setRooms(roomList);
+      });
+    }
+  };
+
+  const handleJoinRoom = (roomID) => {
+    socket.emit("joinRoom", name, roomID);
+    socket.on("roomJoined", (roomID) => {
+      console.log("roomJoined event received with roomID:", roomID);
+      setRoomNumber(roomID);
+    });
+    // redirect user
+    navigate(`/classic-speed/${roomID}`);
+  };
 ```
 
 My work played a vital role in enabling the multiplayer functionality and enhancing the overall user experience of the Speed Card Game app. My understanding of socket.io and room management significantly contributed to the successful implementation of real-time multiplayer gameplay.
