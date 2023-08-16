@@ -38,7 +38,7 @@ function handleClick(i) {
 
     setSquares(nextSquares);
     setXIsNext(!xIsNext);
-  }
+}
 ```
 
 
@@ -70,8 +70,8 @@ for (let j = 0; j <= 41; j++) {
           nextSquares[j] = nextSquares[j - 7];
           nextSquares[j - 7] = null;
         }
-      }
     }
+}
 ```
 
 - **Dynamic Styling**: Styling the game board to reflect player moves and provide visual feedback posed a challenge. The use of dynamic styling in the Square component was essential to achieve this.
