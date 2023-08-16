@@ -5,27 +5,54 @@ This contains the projects that I worked on during CS3750 at WSU. The included p
 * An authentication app that salts and hashes users passwords
 * The beginnings of a online speed card game using sockets
 
-## Tic-Tac-Toe
-This web application showcases a classic game of Tic-Tac-Toe, offering an interactive and engaging experience for players. Built using React, the app provides a user-friendly interface where two players can take turns placing their respective symbols ("X" and "O") on a 3x3 grid. The app includes intelligent game mechanics that automatically determine the winner based on the established game rules, as well as detect ties.
+## Tic-Tac-Toe Game Project
 
-Each move updates the game status, indicating the current player's turn or announcing the winner when the game concludes. The implementation ensures that squares are clickable only if they are not already occupied and the game is ongoing.
+The Tic-Tac-Toe game project provides an interactive web-based version of the well-known Tic-Tac-Toe game. Players take turns marking empty cells on a 3x3 grid with their respective symbols, "X" and "O." The goal is to be the first to form a horizontal, vertical, or diagonal line of three of their symbols.
 
-Whether you're reliving the nostalgia of the traditional game or enjoying friendly competitions with friends and family, this Tic-Tac-Toe app offers an accessible and entertaining way to play.
+The core component of the project is the `Board` React component, which renders the game board and handles player interactions. The game status, including the current player's turn and game outcome, is displayed dynamically on the interface.
+
+### Technologies Used
+
+- **React**: The user interface and interactive components are developed using React, a JavaScript library for building user interfaces.
+
+- **JavaScript**: The game logic, including turn management, win detection, and user interactions, is implemented using JavaScript.
+
+- **CSS**: Styling and layout for the game board and user interface are applied using CSS (Cascading Style Sheets).
+
+### Technical Challenges
+
+- **Game Logic**: Implementing the core game logic, such as determining a win condition and detecting a tie, required careful consideration of the possible winning combinations.
+
+- **Component Interactions**: Ensuring seamless interaction between components, such as updating the game state on square clicks and managing player turns, was crucial for a smooth gameplay experience.
+
+- **Dynamic Status Updates**: Dynamically updating and displaying the game status, including the current player and game outcome, while ensuring a responsive and user-friendly interface was a significant challenge to tackle at the beginning with limited MERN experience.
 
 
 ## Connect Four Game
 
 This project is a web-based implementation of the classic Connect Four game, built using the MERN (MongoDB, Express.js, React, and Node.js) stack. This builds upon the front-end worked on for the Tic-Tac-Toe app and adds the full MERN stack to include access to a DB to store records.
 
-The Connect Four game project provides an interactive and engaging experience of the popular Connect Four game. Players take turns dropping colored discs into a vertically suspended grid. The goal is to form a line of four discs of the same color horizontally, vertically, or diagonally before the opponent does. The game's web-based interface allows players to make their moves by clicking on the desired column in the game grid. Here are the key features:
+The Connect Four game project provides an interactive and engaging experience of the popular Connect Four game. Players take turns dropping colored discs into a vertically suspended grid. The goal is to form a line of four discs of the same color horizontally, vertically, or diagonally before the opponent does. The game's web-based interface allows players to make their moves by clicking on the desired column in the game grid.
 
-- **Game Logic**: Implementing the game logic to determine winners based on horizontal, vertical, and diagonal connections required careful consideration and testing. The game.js component efficiently manages the state and flow of the game.
+### Technologies Used
+
+- **React**: The front-end user interface is built using React, a popular JavaScript library for building user interfaces. It enables dynamic rendering and efficient updates based on the game state.
+
+- **Express.js**: The back-end server is developed using Express.js, a fast and minimalist web application framework for Node.js. Express.js is used to define API routes and handle HTTP requests.
+
+- **MongoDB**: The game records are stored in a MongoDB database. MongoDB is a NoSQL database that provides a flexible and scalable solution for storing and managing data.
+
+- **Node.js**: The backend server runs on Node.js, a runtime environment that allows developers to execute JavaScript on the server side.
+
+- **React Router**: React Router is used for client-side routing, allowing users to navigate between different components of the application without a full page reload.
+
+### Technical Challenges
+
+- **Game Logic**: Implementing the game logic to determine winners based on horizontal, vertical, and diagonal connections required careful consideration and testing. The simulation of gravity was especially difficult, but was solved with a simple for loop. The game.js component efficiently manages the state and flow of the game.
 
 - **Dynamic Styling**: Styling the game board to reflect player moves and provide visual feedback posed a challenge. The use of dynamic styling in the Square component was essential to achieve this.
 
 - **Data Management**: Managing game records, including creating, fetching, updating, and deleting records, required setting up API routes and integrating them with the front end.
-
-
 
 ## User Registration and Password Salting Application
 
