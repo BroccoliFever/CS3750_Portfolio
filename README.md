@@ -158,6 +158,7 @@ This Speed Card Game app was developed as a group project, with a focus on real-
 - Creating separate game rooms and managing player interactions within those rooms.
 - Handling synchronization of game states and player actions through socket.io.
 
+**This is the backend logic for sockets**
 ```javascript
 // server/server.mjs
   socket.on("getRooms", () => {
@@ -195,6 +196,7 @@ This Speed Card Game app was developed as a group project, with a focus on real-
     socket.emit("joinedRoom", userRooms[username]);
   });
 ```
+**Here is the frontend logic using the socket connections for room handling**
 ```javascript
 // client/foyer.js
   useEffect(() => {
