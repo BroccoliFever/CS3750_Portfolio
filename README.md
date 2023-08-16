@@ -7,6 +7,8 @@ This contains the projects that I worked on during CS3750 at WSU. The included p
 
 ## Tic-Tac-Toe Game Project
 
+![tic-tac-toe gif](./images/ttt.gif)
+
 The Tic-Tac-Toe game project provides an interactive web-based version of the well-known Tic-Tac-Toe game. Players take turns marking empty cells on a 3x3 grid with their respective symbols, "X" and "O." The goal is to be the first to form a horizontal, vertical, or diagonal line of three of their symbols.
 
 The core component of the project is the `Board` React component, which renders the game board and handles player interactions. The game status, including the current player's turn and game outcome, is displayed dynamically on the interface.
