@@ -158,6 +158,44 @@ This Speed Card Game app was developed as a group project, with a focus on real-
 - Creating separate game rooms and managing player interactions within those rooms.
 - Handling synchronization of game states and player actions through socket.io.
 
+```javascript
+# server/server.mjs
+  socket.on("getRooms", () => {
+    console.log("getRooms on server.mjs");
+    socket.emit("roomList", rooms);
+  });
+
+  socket.on("createRoom", () => {
+    // generate a random room id
+    const room = v4();
+    socket.join(room);
+    rooms.push(room);
+    console.log("Room created on server.mjs:", room);
+    socket.emit("roomCreated", room);
+    socket.emit("roomList", rooms);
+  });
+
+  socket.on("joinRoom", (username, roomID) => {
+    console.log(username + " joined " + roomID);
+    userRooms[username] = roomID;
+    if (!occupiedRooms[roomID]) {
+      occupiedRooms[roomID] = [username];
+    } else {
+      occupiedRooms[roomID] = [...occupiedRooms[roomID], username];
+    }
+    if (occupiedRooms[roomID].length === 2) {
+      io.emit("roomFull", roomID);
+    }
+    socket.join(roomID);
+    socket.emit("roomJoined", roomID);
+  });
+
+  socket.on("userJoined", (username) => {
+    console.log(username + " joined the server");
+    socket.emit("joinedRoom", userRooms[username]);
+  });
+```
+
 My work played a vital role in enabling the multiplayer functionality and enhancing the overall user experience of the Speed Card Game app. My understanding of socket.io and room management significantly contributed to the successful implementation of real-time multiplayer gameplay.
 
 *Note:* This project was meant to be an experience in a full-stack development lifecycle, and as such creating a fully-functional app was not the end goal. The app is not a complete product, rather a demonstration of solving problems with a team.
