@@ -22,6 +22,7 @@ When a player achieves victory in Connect Four, the app automatically detects th
 
 For those interested in comparing their performance against others, the app provides a dedicated "Highscores" page. Here, users can view a list of previous high scores from various Connect Four games played by different players. The high scores are stored securely in a MongoDB Atlas database, ensuring that the data is persistent and can be accessed from any device.
 
+
 ## User Registration and Password Salting Application
 
 The **User Registration and Password Salting Application** is a React-based web interface that allows users to create an account (for nothing in particular) to demonstrate salting and hashing while building upon the MongoDB used in the Connect Four app above. The application utilizes the MERN (MongoDB, Express.js, React, and Node.js) stack to provide a seamless user experience. Here are some key features about this app:
