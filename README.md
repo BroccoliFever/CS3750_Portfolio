@@ -46,6 +46,8 @@ function handleClick(i) {
 
 ## Connect Four Game
 
+![connect four gif](./images/cfour.gif)
+
 This project is a web-based implementation of the classic Connect Four game, built using the MERN (MongoDB, Express.js, React, and Node.js) stack. This builds upon the front-end worked on for the Tic-Tac-Toe app and adds the full MERN stack to include access to a DB to store records.
 
 The Connect Four game project provides an interactive and engaging experience of the popular Connect Four game. Players take turns dropping colored discs into a vertically suspended grid. The goal is to form a line of four discs of the same color horizontally, vertically, or diagonally before the opponent does. The game's web-based interface allows players to make their moves by clicking on the desired column in the game grid.
@@ -83,6 +85,8 @@ for (let j = 0; j <= 41; j++) {
 
 
 ## User Registration and Password Salting Application
+![bad password](./images/badPassword.gif)
+![good password](./images/goodPassword.gif)
 
 This app is a React-based web interface that allows users to create an account (for nothing in particular) to demonstrate salting and hashing while building upon the MongoDB used in the Connect Four app above. The application utilizes the MERN (MongoDB, Express.js, React, and Node.js) stack to provide a seamless user experience. 
 
@@ -130,6 +134,7 @@ router.post("/", async (req, res) => {
 - **Backend Integration**: Integrating the frontend and backend components of the app, including handling form submissions and database interactions, required establishing communication between React and Express.
 
 ## Speed Card Game App
+![speed game gif](./images/speedGame.gif)
 
 This Speed Card Game app was developed as a group project, with a focus on real-time gameplay using socket.io. My main role was working on the socket connections and creating separate game rooms for players.
 
