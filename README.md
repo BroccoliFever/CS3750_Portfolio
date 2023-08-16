@@ -48,7 +48,17 @@ The Connect Four game project provides an interactive and engaging experience of
 
 ### Technical Challenges
 
-- **Game Logic**: Implementing the game logic to determine winners based on horizontal, vertical, and diagonal connections required careful consideration and testing. The simulation of gravity was especially difficult, but was solved with a simple for loop. The game.js component efficiently manages the state and flow of the game.
+- **Game Logic**: Implementing the game logic to determine winners based on horizontal, vertical, and diagonal connections required careful consideration and testing. The simulation of gravity was especially difficult, but was solved with a simple for loop. The game.js component efficiently manages the state and flow of the game. Here is how gravity was solved:
+```javascript
+for (let j = 0; j <= 41; j++) {
+      if (!nextSquares[j]) {
+        if (j - 7 >= 0 && nextSquares[j - 7]) {
+          nextSquares[j] = nextSquares[j - 7];
+          nextSquares[j - 7] = null;
+        }
+      }
+    }
+```
 
 - **Dynamic Styling**: Styling the game board to reflect player moves and provide visual feedback posed a challenge. The use of dynamic styling in the Square component was essential to achieve this.
 
