@@ -13,19 +13,23 @@ Each move updates the game status, indicating the current player's turn or annou
 Whether you're reliving the nostalgia of the traditional game or enjoying friendly competitions with friends and family, this Tic-Tac-Toe app offers an accessible and entertaining way to play.
 
 
-## Connect Four
-This web app builds upon the Tic-Tac-Toe app, implementing the full MERN (MongoDB, Express.js, React, and Node.js) stack and offering users a way to play the classic game of Connect Four. The game's objective is to connect four of your own colored discs in a row, either horizontally, vertically, or diagonally, before your opponent does.
+# Connect Four Game
 
-Using JavaScript, the game simulates different turns and gravity. As players take turns dropping their colored discs into the grid, the simluated gravity causes the discs to fall to the lowest available position within each column to mimic the real game.
+This project is a web-based implementation of the classic Connect Four game, built using the MERN (MongoDB, Express.js, React, and Node.js) stack. This builds upon the front-end worked on for the Tic-Tac-Toe app and adds the full MERN stack to include access to a DB to store records.
 
-When a player achieves victory in Connect Four, the app automatically detects the winner and directs them to the /create page. This page allows the victorious player to input their name and save their achievement in the high scores database. Additionally, the number of turns taken during the game is passed along with the winner's name.
+The Connect Four game project provides an interactive and engaging experience of the popular Connect Four game. Players take turns dropping colored discs into a vertically suspended grid. The goal is to form a line of four discs of the same color horizontally, vertically, or diagonally before the opponent does. The game's web-based interface allows players to make their moves by clicking on the desired column in the game grid. Here are the key features:
 
-For those interested in comparing their performance against others, the app provides a dedicated "Highscores" page. Here, users can view a list of previous high scores from various Connect Four games played by different players. The high scores are stored securely in a MongoDB Atlas database, ensuring that the data is persistent and can be accessed from any device.
+- **Game Logic**: Implementing the game logic to determine winners based on horizontal, vertical, and diagonal connections required careful consideration and testing. The game.js component efficiently manages the state and flow of the game.
+
+- **Dynamic Styling**: Styling the game board to reflect player moves and provide visual feedback posed a challenge. The use of dynamic styling in the Square component was essential to achieve this.
+
+- **Data Management**: Managing game records, including creating, fetching, updating, and deleting records, required setting up API routes and integrating them with the front end.
+
 
 
 ## User Registration and Password Salting Application
 
-The **User Registration and Password Salting Application** is a React-based web interface that allows users to create an account (for nothing in particular) to demonstrate salting and hashing while building upon the MongoDB used in the Connect Four app above. The application utilizes the MERN (MongoDB, Express.js, React, and Node.js) stack to provide a seamless user experience. Here are some key features about this app:
+This app is a React-based web interface that allows users to create an account (for nothing in particular) to demonstrate salting and hashing while building upon the MongoDB used in the Connect Four app above. The application utilizes the MERN (MongoDB, Express.js, React, and Node.js) stack to provide a seamless user experience. Here are some key features about this app:
 
 - **User Registration**: Administrators can create new user accounts by providing a username, password, confirming the password, and selecting an account type from the available options: admin, employee, or customer.
 
