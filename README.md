@@ -1,4 +1,4 @@
-# CS3750_Portfolio
+# CS3750 Portfolio
 This contains the projects that I worked on during CS3750 at WSU. The included projects are:
 * A tic-tac-toe game
 * A connect four game that also includes highscore functionality
