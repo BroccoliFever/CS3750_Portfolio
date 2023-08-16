@@ -13,7 +13,7 @@ Each move updates the game status, indicating the current player's turn or annou
 Whether you're reliving the nostalgia of the traditional game or enjoying friendly competitions with friends and family, this Tic-Tac-Toe app offers an accessible and entertaining way to play.
 
 
-# Connect Four Game
+## Connect Four Game
 
 This project is a web-based implementation of the classic Connect Four game, built using the MERN (MongoDB, Express.js, React, and Node.js) stack. This builds upon the front-end worked on for the Tic-Tac-Toe app and adds the full MERN stack to include access to a DB to store records.
 
