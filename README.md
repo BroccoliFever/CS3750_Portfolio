@@ -106,6 +106,23 @@ During the development of the NewUser app, several technical challenges were add
 
 - **Password Complexity Validation**: Implementing password complexity validation required analyzing and scoring passwords based on criteria such as length, character types, and special characters.
 
-- **Secure Password Storage**: Ensuring secure storage of user passwords in the database involved using the `bcrypt` library to hash passwords before storing them.
+- **Secure Password Storage**: Ensuring secure storage of user passwords in the database involved using the `bcrypt` library to hash passwords before storing them. Here is the method used to salt and hash the passwords:
+```javascript
+router.post("/", async (req, res) => {
+    const salt = bcrypt.genSaltSync();
+    const hashedPassword = bcrypt.hashSync(req.body.password, salt); 
+
+    let newUser = {
+        accountType: req.body.accountType,
+        username: req.body.username,
+        password: hashedPassword,
+        salt: salt
+    }
+
+    let collection = await db.collection("records");
+    let result = await collection.insertOne(newUser);
+    res.send(result).status(204);
+});
+```
 
 - **Backend Integration**: Integrating the frontend and backend components of the app, including handling form submissions and database interactions, required establishing communication between React and Express.
