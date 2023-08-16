@@ -25,7 +25,21 @@ The core component of the project is the `Board` React component, which renders 
 
 - **Component Interactions**: Ensuring seamless interaction between components, such as updating the game state on square clicks and managing player turns, was crucial for a smooth gameplay experience.
 
-- **Dynamic Status Updates**: Dynamically updating and displaying the game status, including the current player and game outcome, while ensuring a responsive and user-friendly interface was a significant challenge to tackle at the beginning with limited MERN experience.
+- **Dynamic Status Updates**: Dynamically updating and displaying the game status, including the current player and game outcome, while ensuring a responsive and user-friendly interface was a significant challenge to tackle at the beginning with limited MERN experience. This was solved in a handler function:
+```
+function handleClick(i) {
+    if (squares[i] || calculateWinner(squares)) return; // if square is already filled, return (do nothing
+    const nextSquares = squares.slice();
+    if (xIsNext) {
+      nextSquares[i] = "X";
+    } else {
+      nextSquares[i] = "O";
+    }
+
+    setSquares(nextSquares);
+    setXIsNext(!xIsNext);
+  }
+```
 
 
 ## Connect Four Game
@@ -49,7 +63,6 @@ The Connect Four game project provides an interactive and engaging experience of
 ### Technical Challenges
 
 - **Game Logic**: Implementing the game logic to determine winners based on horizontal, vertical, and diagonal connections required careful consideration and testing. The simulation of gravity was especially difficult, but was solved with a simple for loop. The game.js component efficiently manages the state and flow of the game. Here is how gravity was solved:
-<pre>
 ```javascript
 for (let j = 0; j <= 41; j++) {
       if (!nextSquares[j]) {
@@ -60,7 +73,6 @@ for (let j = 0; j <= 41; j++) {
       }
     }
 ```
-</pre>
 
 - **Dynamic Styling**: Styling the game board to reflect player moves and provide visual feedback posed a challenge. The use of dynamic styling in the Square component was essential to achieve this.
 
