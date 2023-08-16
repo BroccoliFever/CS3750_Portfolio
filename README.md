@@ -54,6 +54,8 @@ This project is a web-based implementation of the classic Connect Four game, bui
 
 The Connect Four game project provides an interactive and engaging experience of the popular Connect Four game. Players take turns dropping colored discs into a vertically suspended grid. The goal is to form a line of four discs of the same color horizontally, vertically, or diagonally before the opponent does. The game's web-based interface allows players to make their moves by clicking on the desired column in the game grid.
 
+**Click [here](./connectFour) to view the repo for this project!**
+
 ### Technologies Used
 
 - **React**: The front-end user interface is built using React, a popular JavaScript library for building user interfaces. It enables dynamic rendering and efficient updates based on the game state.
@@ -91,6 +93,8 @@ for (let j = 0; j <= 41; j++) {
 ![good password](./images/goodPassword.gif)
 
 This app is a React-based web interface that allows users to create an account (for nothing in particular) to demonstrate salting and hashing while building upon the MongoDB used in the Connect Four app above. The application utilizes the MERN (MongoDB, Express.js, React, and Node.js) stack to provide a seamless user experience. 
+
+**Click [here](./mern-auth) to view the repo for this project!**
 
 ### Technologies Used
 
@@ -139,6 +143,8 @@ router.post("/", async (req, res) => {
 ![speed game gif](./images/speedGame.gif)
 
 This Speed Card Game app was developed as a group project, with a focus on real-time gameplay using socket.io. My main role was working on the socket connections and creating separate game rooms for players.
+
+**Click [here](./speedGame) to view the repo for this project!**
 
 ### Technologies Used
 
